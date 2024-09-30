@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSE 383 Lab 8</title>
+</head>
+
+<body>
+<h1>Lab 8: Form</h1>
+<form action="https://ceclnx01.cec.miamioh.edu/~johnsok9/cse383/lab8/lab8.php" target="_blank">
+<label for="name"> Name: </label>
+<input type="text" id="name" name="name" size="10" required minlength="2"><br>
+<label for="uid"> Unique ID: </label>
+<input type="text" id="uid" name="uid" size="10" onkeydown="return /[a-zA-Z0-9_]/i.test(event.key)"><br>
+<label for="numMobileDevices"> Number of Mobile Devices: </label>
+<input type="number" id="numMobileDevices" name="numMobileDevices" min="1" max="10"><br>
+<label for="quoteCite"> Quotation: </label>
+<input type="text" id="quoteCite" name="quoteCite" onkeydown="return /[a-zA-Z ]/i.test(event.key)"><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

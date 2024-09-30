@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+    
+        <script src="script.js"></script>
+
+        <title>Ecommerce</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://miamioh.edu/miami-brand/_files/images/system/logo-usage/minimum-size/beveled-m-min-size.png" width="70" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="ecommerce.html">Ecommerce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="myOrders.html">My Orders</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>Ecommerce App</h1>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-primary" id="cartButton" type="button" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">
+                    <i class="bi bi-cart4"></i>Cart</button>
+            </div>
+   
+            <form class="mb-4">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label for="categorySelect" class="form-label">Category</label>
+                        <select id="categorySelect" class="form-select">
+                            <option selected value="%">All</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="priceLow" class="form-label">Min Price</label>
+                        <input type="number" id="priceLow" class="form-control">
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="priceHigh" class="form-label">Max Price</label>
+                        <input type="number" id="priceHigh" class="form-control">
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="sortBy" class="form-label">Sort by: </label>
+                        <select id="sortBy" class="form-select">
+                            <option value="price">Lowest Price</option>
+                            <option value="price DESC">Highest Price</option>
+                            <option selected value="subcategory">Category, ascending</option>
+                        </select>
+                    </div>
+            </form>
+
+            <div id="alert"></div>
+
+            <h2>Products</h2>
+            <div class="list">
+                <table id="productsTable" class="table table-striped">
+                    <tbody id="productsList">
+    
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="modal fade" id="shoppingCartModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" id="dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title" id="modalLabel">Shopping Cart</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="totalPrice">
+                        
+                    </div>
+                    <div class="modal-body">
+                        <table id="cartTable" class="table table-striped">
+                            <tbody id="cartItems">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer" id="modalFooter">
+                        <button type="button" class="btn btn-info" id="backButton" onclick="getCartItems()">Back</button>
+                        <button type="button" class="btn btn-secondary" id="closeModalButton" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" id="checkoutButton" onclick="showCheckout()" disabled>Checkout</button>
+                        <button type="button" class="btn btn-success" id="paymentButton" onclick="makePayment()" disabled>Make Payment</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>

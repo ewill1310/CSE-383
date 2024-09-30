@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSE 383 Lab 8</title>
+</head>
+<body> 
+<canvas id="myCanvas" width="400" height="400"></canvas>
+<script> 
+  const canvas = document.getElementById('myCanvas');
+   const context = canvas.getContext('2d');
+   const triangles = [];
+
+   function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+         color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+   }
+
+   function isOverlapping(x, y, size) {
+      for (const triangle of triangles) {
+         const [tx, ty, tsize] = triangle;
+         const minDistance = size + tsize;
+         if (Math.abs(x - tx) < minDistance && Math.abs(y - ty) < minDistance) {
+            return true;
+         }
+      }
+      return false;
+   }
+
+   function drawRandomTriangle() {
+      let x, y, size;
+      let attempts = 0;
+      const maxAttempts = 100;
+
+      do {
+         size = Math.random() * 50 + 20;
+         x = Math.random() * (canvas.width - size);
+         y = Math.random() * (canvas.height - size);
+         attempts++;
+      } while (isOverlapping(x, y, size) && attempts < maxAttempts);
+      if (attempts < maxAttempts) {
+         const color = getRandomColor();
+         context.beginPath();
+         context.moveTo(x, y);
+         context.lineTo(x + size, y);
+         context.lineTo(x + size / 2, y + size * Math.sqrt(3) / 2);
+         context.closePath();
+         context.fillStyle = color;
+         context.fill();
+         triangles.push([x, y, size]);
+      }
+   }
+
+   function drawTenTriangles() {
+      for (let i = 0; i < 10; i++) {
+         drawRandomTriangle();
+      }
+   }
+
+drawTenTriangles();
+</script>
+</body>
+</html>

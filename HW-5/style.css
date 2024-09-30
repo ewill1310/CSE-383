@@ -1,0 +1,57 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%%
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #d5dae0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Lucida Handwriting", Lucida, cursive;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 10%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}

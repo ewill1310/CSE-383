@@ -1,0 +1,49 @@
+h1 {
+  color: green;
+  font-size: 28;
+  text-align: center;
+  font-style: italic;
+}
+
+h2 {
+  color: red;
+  font-size: 22px;
+  text-alight: left;
+  font-style: bold;
+}
+
+p {
+  text-indent: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#para1 {
+  color: green;
+}
+
+#para1::first-letter {
+  font-size: 80px;
+}
+
+#div1 {
+  border-style: dashed;
+  border-color: green;
+  border-width: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.bold {
+  font-style: bold;
+}
+
+Li {
+  color: red;
+  text-decoration-line: underline;
+}
+
+a {
+  color: green;
+  outline-style: solid;
+}

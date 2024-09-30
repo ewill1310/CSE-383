@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <title>CSE 383 Homework #5</title>
+  </head>
+  <body>
+    <h1>Evan Williams</h1>
+    
+    <img class="center" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/72d80f66-81a9-4528-a793-a07d6636752c/dbcaqup-7d34bbfa-4a11-463c-b73e-a4f3fd75d1af.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzcyZDgwZjY2LTgxYTktNDUyOC1hNzkzLWEwN2Q2NjM2NzUyY1wvZGJjYXF1cC03ZDM0YmJmYS00YTExLTQ2M2MtYjczZS1hNGYzZmQ3NWQxYWYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Th5uIjzkzpXcTLrRVsmH2umODL1OHPABCUJqlbLf3cg" width="800" height="600" alt="Purple Fox">
+    <br>
+    <hr>
+    <br>
+    
+    <form action="hw5f23.php" method="post" target="_blank">
+      <div class="container">
+      <div class="row">
+      <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label" for="useridf23">UserID</label>
+        <input type="text" class="form-control" name="useridf23" id="useridf23">
+      </div>
+      </div>
+      <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label" for="emailf23">Email address</label>
+        <input type="email" class="form-control" name="emailf23" id="emailf23" placeholder="name@example.com">
+      </div>
+      </div>
+      <div class="col-md-4">
+      <div class="form-group">
+        <label class="control-label" for="birthYearf23">Birth year</label>
+        <select  class="form-control" name="birthYearf23" id="birthYearf23">
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+    <option value="2018">2018</option>
+    <option value="2017">2017</option>
+    <option value="2016">2016</option>
+    <option value="2015">2015</option>
+    <option value="2014">2014</option>
+    <option value="2013">2013</option>
+    <option value="2012">2012</option>
+    <option value="2011">2011</option>
+    <option value="2010">2010</option>
+    <option value="2009">2009</option>
+    <option value="2008">2008</option>
+    <option value="2007">2007</option>
+    <option value="2006">2006</option>
+    <option value="2005">2005</option>
+    <option value="2004">2004</option>
+    <option value="2003">2003</option>
+    <option value="2002">2002</option>
+    <option value="2001">2001</option>
+    <option value="2000">2000</option>
+    <option value="1999">1999</option>
+    <option value="1998">1998</option>
+    <option value="1997">1997</option>
+    <option value="1996">1996</option>
+    <option value="1995">1995</option>
+    <option value="1994">1994</option>
+    <option value="1993">1993</option>
+    <option value="1992">1992</option>
+    <option value="1991">1991</option>
+    <option value="1990">1990</option>
+        </select>
+      </div>
+      </div>
+      </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="container">
+      <div class="row">
+      <div class="col-4">
+      <div class="form-group">
+        <label class="control-label" >Entry Year</label><br>
+        <input type="radio" class="form-control" name="entryYearf23" id="entryYearf23-1" value="2019">
+        <label class="control-label" for="entryYearf23-1">2019</label><br>
+        <input type="radio" class="form-control" name="entryYearf23" id="entryYearf23-2" value="2020">
+        <label class="control-label" for="entryYearf23-1">2020</label><br>
+        <input type="radio" class="form-control" name="entryYearf23" id="entryYearf23-3" value="2021">
+        <label class="control-label" for="entryYearf23-1">2021</label><br>
+        <input type="radio" class="form-control" name="entryYearf23" id="entryYearf23-4" value="2022">
+        <label class="control-label" for="entryYearf23-1">2022</label><br>
+        <input type="radio" class="form-control" name="entryYearf23" id="entryYearf23-5" value="2023">
+        <label class="control-label" for="entryYearf23-1">2023</label><br>
+        <input type="radio" class="form-control" name="entryYearf23" id="entryYearf23-6" value="0">
+        <label class="control-label" for="entryYearf23-1">Other</label>
+      </div>
+      </div>
+      <div class="col-4">
+      <div class="form-group">
+        <label class="control-label" for="gradDatef23">Graduation Date</label>
+        <input type="date" class="form-control" name="gradDatef23" id="gradDatef23">
+      </div>
+      </div>
+      </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="container">
+      <div class="row">
+      <div class="col-4">
+      <div class="form-group">
+        <label class="control-label" for="csef23">Check if you are a CSE Major</label>
+        <input type="checkbox" class="form-control" name="csef23" id="csef23" value="yes">
+      </div>
+      </div>
+      <div class="col-4">
+      <div class="form-group">
+        <label class="control-label" for="carf23">Check if you own a car</label>
+        <input type="checkbox" class="form-control" name="carf23" id="carf23" value="yes">
+      </div>
+      </div>
+      <div class="col-4">
+      <div class="form-group">
+        <label class="control-label" for="mobileDevicef23">How many mobile devices do you own? (Including Laptops)</label>
+        <select  class="form-control" name="mobileDevicef23" id="mobileDevicef23">
+          <option value="">Choose One</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="container">
+      <div class="row">
+      <div class="col-4">
+      <div class="form-group">
+        <label class="control-label" for="quotef23">Favorite quote</label><br>
+        <textarea class="form-control" name="quotef23" id="quotef23" rows="5" cols="40"></textarea>
+      </div>
+      </div>
+      <div class="col-4">
+      <div class="form-group">
+        <label class="control-label" for="quoteCitef23">Cite your quote here</label>
+        <input type="url" class="form-control" name="quoteCitef23" id="quoteCitef23" placeholder="url">
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" name="commandf23" id="commandf23" value="submit">
+      </div>
+      <div class="buttons">
+      <input type="submit" class="btn btn-primary">
+      <input type="reset" class="btn btn-primary">
+      </div>
+    </form>
+    <br>
+    <hr>
+    <br>
+
+    <footer>
+      <p>Class: CSE383</p>
+      <p>Assignment: Homework 5</p>
+      <p>Due date: October 2, 2023</p>
+    </footer>
+  </body>
+</html>
